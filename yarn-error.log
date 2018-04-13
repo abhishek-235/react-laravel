@@ -1,0 +1,71 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.9.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+      "private": true,
+      "scripts": {
+          "dev": "npm run development",
+          "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+          "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+          "watch-poll": "npm run watch -- --watch-poll",
+          "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+          "prod": "npm run production",
+          "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+      },
+      "devDependencies": {
+          "axios": "^0.17",
+          "babel-preset-react": "^6.23.0",
+          "bootstrap-sass": "^3.3.7",
+          "cross-env": "^5.1",
+          "jquery": "^3.2",
+          "laravel-mix": "^1.0",
+          "lodash": "^4.17.4",
+          "react": "^15.4.2",
+          "react-dom": "^15.4.2"
+      },
+      "dependencies": {
+          "babel-preset-es2015": "^6.24.1",
+          "babel-preset-stage-2": "^6.24.1"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: /var/www/html/react-laravel/node_modules/pngquant-bin: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c node lib/install.js
+  Directory: /var/www/html/react-laravel/node_modules/pngquant-bin
+  Output:
+  ⚠ The `/var/www/html/react-laravel/node_modules/pngquant-bin/vendor/pngquant` binary doesn't seem to work correctly
+    ⚠ pngquant pre-build test failed
+    ℹ compiling from source
+    ✔ pngquant pre-build test passed successfully
+    ✖ Error: pngquant failed to build, make sure that libpng-dev is installed
+      at Promise.all.then.arr (/var/www/html/react-laravel/node_modules/pngquant-bin/node_modules/bin-build/node_modules/execa/index.js:231:11)
+      at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:118:7)
+      at ProcessTermError.MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/share/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/share/yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:180:13)
+      at maybeClose (internal/child_process.js:936:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
