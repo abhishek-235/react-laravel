@@ -1,1 +1,11 @@
 .product-list { float:left; }
+nav { height: 40px; }
+nav ul {
+width: 50%;
+margin: 0 auto;
+}
+nav li {
+	float: left;
+	margin: 0 30px;
+}
+.clear { clear: both; }
